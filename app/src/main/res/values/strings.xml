@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">YourValue</string>
+    <string name="api_URL">https://openapi.seoul.go.kr:8088/50446678776b736d3835417a6d6e61/json/GarakAuctionRslt/1/5/%EB%AC%BC%EC%98%A4%EC%A7%95%EC%96%B4/</string>
 </resources>
