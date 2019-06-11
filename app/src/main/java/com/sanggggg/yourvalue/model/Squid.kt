@@ -3,13 +3,12 @@ package com.sanggggg.yourvalue.model
 import com.squareup.moshi.Json
 
 data class Squid(
-    @field:Json(name = "PUMNAME") val pumname: String,
-    @field:Json(name = "GRADENAME") val gradename: String,
-    @field:Json(name = "UNITQTY") val unitqty: String,
-    @field:Json(name = "UNITNAME") val unitname: String,
-    @field:Json(name = "MAXPRICE") val maxPrice: Double,
-    @field:Json(name = "MINPRICE") val minPrice: Double,
-    @field:Json(name = "AVGPRICE") val avgPrice: Double,
-    @field:Json(name = "INVEST_DT") val investDt: String
+    @field:Json(name = "PUM_NAME") val pum_name: String,
+    @field:Json(name = "UUN") val uun: String,
+    @field:Json(name = "DDD") val ddd: String,
+    @field:Json(name = "PPRICE") val pprice: Double,
+    @field:Json(name = "SSANGI") val ssangi: String,
+    @field:Json(name = "INJUNG_GUBUN") val injung_gubun: String,
+    @field:Json(name = "ADJ_DT") val adj_dt: String
 
 )

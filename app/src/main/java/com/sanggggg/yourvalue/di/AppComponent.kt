@@ -16,6 +16,7 @@ import javax.inject.Singleton
         AndroidSupportInjectionModule::class,
         AndroidInjectionModule::class,
         AppModule::class,
+        ActivityModule::class,
         NetworkModule::class
     ]
 )
@@ -25,11 +26,9 @@ interface AppComponent : AndroidInjector<SquidApplication> {
     interface Builder {
         @BindsInstance
         fun application(application: Application) : Builder
-
         fun networkModule(networkModule: NetworkModule) : Builder
         fun build() : AppComponent
     }
 
     override fun inject(instance: SquidApplication)
-
 }

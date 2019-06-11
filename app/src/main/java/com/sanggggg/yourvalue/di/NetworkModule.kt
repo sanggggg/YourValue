@@ -16,7 +16,7 @@ class NetworkModule {
     @Singleton
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(R.string.api_URL.toString())
+            .baseUrl("http://openapi.seoul.go.kr:8088/50446678776b736d3835417a6d6e61/json/GarakAuctionRslt/1/1/오징어수입/")
             .addConverterFactory(MoshiConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
