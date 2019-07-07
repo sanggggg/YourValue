@@ -3,4 +3,21 @@
     <string name="API_KEY">50446678776b736d3835417a6d6e61</string>
     <string name="API_ARG">/json/GarakAuctionRslt/1/1/%EC%98%A4%EC%A7%95%EC%96%B4%EC%88%98%EC%9E%85/</string>
     <string name="API_URL">https://openapi.seoul.go.kr:8088/</string>
+
+    <string name="page1">
+        사람의 가치를\n매기는 것은\n정말 힘든 일입니다
+    </string>
+    <string name="page2">
+        당신의 가치를\n몇가지 질문을 통해\n빠르고, 정확하게\n알려 드립니다
+    </string>
+    <string name="page3">
+        당신의 몸무게는\n얼마 인가요?
+    </string>
+
+    <string name="main_aftervalue">
+        \s입니다
+    </string>
+    <string name="main_beforesquid">
+        *물오징어(국산) 수입가 kg당
+    </string>
 </resources>

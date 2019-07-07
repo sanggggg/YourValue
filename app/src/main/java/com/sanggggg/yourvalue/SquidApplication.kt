@@ -5,19 +5,17 @@ import android.app.Application
 import android.os.Build
 import com.sanggggg.yourvalue.di.DaggerAppComponent
 import com.sanggggg.yourvalue.di.NetworkModule
+import com.sanggggg.yourvalue.di.PreferenceModule
 import dagger.android.*
+import timber.log.Timber
 import javax.inject.Inject
 
-class SquidApplication : DaggerApplication(), HasActivityInjector {
-
-    @Inject
-    lateinit var activityInjector: DispatchingAndroidInjector<Activity>
-
-    override fun activityInjector(): DispatchingAndroidInjector<Activity> = activityInjector
+class SquidApplication : DaggerApplication() {
 
     private val appComponent = DaggerAppComponent.builder()
         .application(this)
         .networkModule(NetworkModule())
+        .preferenceModule(PreferenceModule("debug.yourvalue"))
         .build()
 
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
@@ -27,6 +25,8 @@ class SquidApplication : DaggerApplication(), HasActivityInjector {
     override fun onCreate() {
         super.onCreate()
         appComponent.inject(this)
-
+        if (BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
+        }
     }
 }

@@ -11,6 +11,6 @@ interface SquidService {
     @GET("/{ADJ_DT}")
     fun fetchSquid(@Path("ADJ_DT")ADJ_DT : String): Observable<NestedResponse>*/
 
-    @GET("20190606")
-    fun fetchSquid(): Observable<NestedResponse>
+    @GET("{ADJ_DT}")
+    fun fetchSquid(@Path("ADJ_DT")ADJ_DT : String): Observable<NestedResponse>
 }
